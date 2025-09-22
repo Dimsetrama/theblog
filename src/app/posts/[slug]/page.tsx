@@ -9,13 +9,16 @@ import Header from "@/app/_components/header";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
 
+// THIS IS THE CORRECTED TYPE
 type Params = {
   params: {
     slug: string;
   };
 };
 
+// THE `params` PROP IS USED DIRECTLY HERE (NO `props` WRAPPER)
 export default async function Post({ params }: Params) {
+  // `await` IS REMOVED. `params` IS USED DIRECTLY.
   const post = getPostBySlug(params.slug);
 
   if (!post) {
@@ -35,7 +38,7 @@ export default async function Post({ params }: Params) {
             coverImage={post.coverImage}
             date={post.date}
             author={post.author}
-            imageCaption={post.imageCaption} // <-- THIS IS THE MISSING LINE TO ADD
+            imageCaption={post.imageCaption}
           />
           <PostBody content={content} />
         </article>
@@ -44,9 +47,7 @@ export default async function Post({ params }: Params) {
   );
 }
 
-// NOTE: The rest of the file (generateMetadata, generateStaticParams)
-// doesn't need to be changed, but I've included it for completeness.
-
+// THIS FUNCTION IS ALSO CORRECTED TO USE THE SIMPLER TYPE
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const post = getPostBySlug(params.slug);
 
