@@ -9,16 +9,15 @@ import Header from "@/app/_components/header";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
 
-// THIS IS THE CORRECTED TYPE
-type Params = {
+// More explicit type definition for the page's props
+type Props = {
   params: {
     slug: string;
   };
 };
 
-// THE `params` PROP IS USED DIRECTLY HERE (NO `props` WRAPPER)
-export default async function Post({ params }: Params) {
-  // `await` IS REMOVED. `params` IS USED DIRECTLY.
+// Main page component using the Props type
+export default async function Post({ params }: Props) {
   const post = getPostBySlug(params.slug);
 
   if (!post) {
@@ -47,8 +46,8 @@ export default async function Post({ params }: Params) {
   );
 }
 
-// THIS FUNCTION IS ALSO CORRECTED TO USE THE SIMPLER TYPE
-export async function generateMetadata({ params }: Params): Promise<Metadata> {
+// generateMetadata function also using the Props type
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPostBySlug(params.slug);
 
   if (!post) {
@@ -66,6 +65,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   };
 }
 
+// generateStaticParams remains the same
 export async function generateStaticParams() {
   const posts = getAllPosts();
 
