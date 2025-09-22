@@ -9,8 +9,13 @@ import Header from "@/app/_components/header";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
 
-export default async function Post(props: Params) {
-  const params = await props.params;
+type Params = {
+  params: {
+    slug: string;
+  };
+};
+
+export default async function Post({ params }: Params) {
   const post = getPostBySlug(params.slug);
 
   if (!post) {
@@ -30,6 +35,7 @@ export default async function Post(props: Params) {
             coverImage={post.coverImage}
             date={post.date}
             author={post.author}
+            imageCaption={post.imageCaption} // <-- THIS IS THE MISSING LINE TO ADD
           />
           <PostBody content={content} />
         </article>
@@ -38,14 +44,10 @@ export default async function Post(props: Params) {
   );
 }
 
-type Params = {
-  params: Promise<{
-    slug: string;
-  }>;
-};
+// NOTE: The rest of the file (generateMetadata, generateStaticParams)
+// doesn't need to be changed, but I've included it for completeness.
 
-export async function generateMetadata(props: Params): Promise<Metadata> {
-  const params = await props.params;
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const post = getPostBySlug(params.slug);
 
   if (!post) {
