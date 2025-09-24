@@ -40,10 +40,6 @@ export default function AboutPage() {
               </p>
 
               <p className="mb-8">
-                Philosophers call that existential irony. Instagram calls it Notes.
-              </p>
-
-              <p className="mb-8">
                 He is the kind of person who takes the tragicomedy of life very seriously. When he cuts down his body fat, it’s not just about looking sharper in the mirror; it’s about slicing away the unnecessary illusions of comfort, burning them off like calories.
                 The prick who will train to failure and then write an autistic caption about failure like it was preordained by the gods of schizophrenic anarchist. If Camus told us to imagine Sisyphus happy, this guy would probably reply, "Sisyphus would post gym pics too."
               </p>
@@ -67,13 +63,13 @@ export default function AboutPage() {
                 After all, some people go to confession, others chase enlightenment. He just deadlifts until his spine negotiates a truce with gravity.
               </p>
 
-              <Image
+              {/* <Image
                 src="/assets/blog/about/ur-weird-man.jpg"
                 alt=""
                 width={1300}
                 height={630}
                 className="my-8 w-full h-auto"
-              />
+              /> */}
 
               <p className="mb-8">
                 And then there's the matter of faith, or the absence of it. That guy, in a way, is devout in his atheism. Rationality is practically his version of a substitute, a place where one stops and thinks, "Should we really bow to Him?".

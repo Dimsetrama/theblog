@@ -18,10 +18,9 @@ Camus saw this absurdity not as a tragedy but as a stage set for freedom. We pus
 
 Of course, Camus didn’t have to wake up to alarms at 6 a.m. or reply to 43 unread emails, but still, Sisyphus’s punishment is not so different from our routines.
 
-But here’s where it gets tricky.
+But have we ever to just stop and think?
 
-
-When does a routine become discipline? And when does discipline become a mindless redundancy? You wake up early every morning, go for a run, meditate, drink your matcha, go to work or class, share some “hi” and “hello”, other boring conversation to make the day go by, go home and repeat.
+When does a routine become discipline? And when does discip line become a mindless redundancy? You wake up early every morning, go for a run, meditate, drink your matcha, go to work or class, share some “hi” and “hello”, other boring conversation to make the day go by, go home and repeat.
 
 Sounds meaningful, right? But is it discipline because it shapes your life? Or redundancy because you’re stuck in a loop society convinced you is “productive”? At what point does counting calories and drinking whey powder stop being a choice and start being your own personal rock?
 
